@@ -12,6 +12,8 @@ return require('packer').startup(function(use)
   -- plugin manager
   use 'wbthomason/packer.nvim'
 
+  use 'williamboman/mason.nvim'
+
   -- basic setup
   use 'tpope/vim-vinegar'
   use {
@@ -31,6 +33,7 @@ return require('packer').startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
   use 'nmac427/guess-indent.nvim'
   use 'christoomey/vim-tmux-navigator'
+  use 'rcarriga/nvim-notify'
 
   use 'mrjones2014/legendary.nvim'
   use 'nvim-telescope/telescope.nvim'
@@ -42,6 +45,7 @@ return require('packer').startup(function(use)
   use 'mbbill/undotree'
 
   -- lsp
+  use 'williamboman/mason-lspconfig.nvim'
   use 'neovim/nvim-lspconfig'
   use {
     "pmizio/typescript-tools.nvim",
@@ -67,6 +71,7 @@ return require('packer').startup(function(use)
   use 'tikhomirov/vim-glsl'
   use 'habamax/vim-godot'
   use 'mfussenegger/nvim-dap'
+  use 'dmmulroy/tsc.nvim'
 
   use({
   "jackMort/ChatGPT.nvim",

@@ -6,6 +6,8 @@ local cmd = vim.cmd
 
 o.updatetime = 50
 
+vim.notify = require("notify")
+
 -- use mouse
 o.mouse = 'a'
 
