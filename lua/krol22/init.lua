@@ -1,3 +1,3 @@
 require("krol22/set")
-require("krol22/map")
-require("krol22/plugins")
+require("krol22/mappings")
+require("krol22/packer")

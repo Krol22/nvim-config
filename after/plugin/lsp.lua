@@ -12,7 +12,7 @@ vim.keymap.set("n", "[d", ":lua vim.diagnostic.goto_prev() <CR> :lua vim.lsp.buf
 vim.keymap.set("n", "]d", ":lua vim.diagnostic.goto_next() <CR> :lua vim.lsp.buf.code_action() <CR>", { desc = "Goto next error and show code actions" })
 vim.keymap.set("n", "<leader>[", ":lua vim.diagnostic.goto_prev() <CR>", { desc = "Goto prev error" })
 vim.keymap.set("n", "<leader>]", ":lua vim.diagnostic.goto_next() <CR>", { desc = "Goto next error" })
-vim.keymap.set("n", "<leader>dl", ":lua vim.diagnostic.setloclist() <CR>", { decs = "Show loc list" })
+vim.keymap.set("n", "<leader>dl", ":lua vim.diagnostic.setloclist() <CR>", { desc = "Show loc list" })
 vim.keymap.set("v", "<leader>f", ":lua vim.lsp.buf.format()", { desc = "Format current buffer" })
 
 -- general
