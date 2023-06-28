@@ -37,19 +37,17 @@ return require('packer').startup(function(use)
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'folke/trouble.nvim'
-
   use 'tpope/vim-fugitive'
-
   use 'mbbill/undotree'
 
   -- lsp
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
   use 'neovim/nvim-lspconfig'
-  -- use {
-    -- "pmizio/typescript-tools.nvim",
-    -- requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" }
-  -- }
+  use {
+    "pmizio/typescript-tools.nvim",
+    requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" }
+  }
 
   -- completion
   use 'hrsh7th/cmp-buffer'
