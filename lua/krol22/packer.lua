@@ -12,8 +12,6 @@ return require('packer').startup(function(use)
   -- plugin manager
   use 'wbthomason/packer.nvim'
 
-  use 'williamboman/mason.nvim'
-
   -- basic setup
   use 'tpope/vim-vinegar'
   use {
@@ -45,12 +43,13 @@ return require('packer').startup(function(use)
   use 'mbbill/undotree'
 
   -- lsp
+  use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
   use 'neovim/nvim-lspconfig'
-  use {
-    "pmizio/typescript-tools.nvim",
-    requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" }
-  }
+  -- use {
+    -- "pmizio/typescript-tools.nvim",
+    -- requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" }
+  -- }
 
   -- completion
   use 'hrsh7th/cmp-buffer'
@@ -69,25 +68,27 @@ return require('packer').startup(function(use)
   use 'peitalin/vim-jsx-typescript'
   use 'MaxMEllon/vim-jsx-pretty'
   use 'tikhomirov/vim-glsl'
-  use 'habamax/vim-godot'
+  use {
+    'habamax/vim-godot',
+    ft = { 'gdscript', 'gd', 'gdresource' }
+  }
+
   use 'mfussenegger/nvim-dap'
   use 'dmmulroy/tsc.nvim'
 
-  use({
+  use {
   "jackMort/ChatGPT.nvim",
-    config = function()
-      require("chatgpt").setup()
-    end,
     requires = {
       "MunifTanjim/nui.nvim",
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope.nvim"
     }
-})
+  }
 
   -- apperance
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
+  use 'hachy/eva01.vim'
   use 'embark-theme/vim'
   use 'onsails/lspkind-nvim'
   use 'junegunn/seoul256.vim'

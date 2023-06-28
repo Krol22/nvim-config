@@ -56,15 +56,12 @@ cmd('autocmd FileType javascript.jsx setlocal shiftwidth=2 expandtab')
 cmd('autocmd FileType css setlocal shiftwidth=2 expandtab')
 cmd('autocmd FileType html setlocal shiftwidth=2 expandtab')
 
--- apperance
-o.termguicolors = true
-cmd('colorscheme mellow')
+vim.o.termguicolors = true
+vim.cmd("colorscheme eva01")
 
 g.rainbow_active = 1
 g.vim_json_syntax_conceal = 0
 g.vim_json_conceal = 0
-
--- exit on esc in telescope
 
 -- godot
 g.godot_executable = '/Applications/Godot.app'

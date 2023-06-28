@@ -1,4 +1,4 @@
-vim.keymap.set("n", "<M-/>", "<leader>c<space>", { desc = "Comment in normal mode"})
-vim.keymap.set("n", "<M-/>", "<leader>c<space>", { desc = "Comment in visual mode"})
+vim.api.nvim_set_keymap("n", "<M-/>", "<leader>c<space>", {})
+vim.api.nvim_set_keymap("v", "<M-/>", "<leader>c<space>", {})
 
 vim.g.NERDSpaceDelims = 1
