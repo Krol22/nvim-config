@@ -3,18 +3,6 @@ local util = require "lspconfig/util"
 local cmd = vim.cmd
 local diagnostic = vim.diagnostic
 
-vim.keymap.set("n", "<C-d>", ":lua vim.lsp.buf.definition() <CR>", { desc = "LSP show definitions" })
-vim.keymap.set("n", "<C-b>", ":lua vim.lsp.buf.code_action() <CR>", { desc = "LSP show code actions" })
-vim.keymap.set("n", "H", ":lua vim.lsp.buf.hover() <CR>", { desc = "LSP show definition" })
-vim.keymap.set("n", "<leader>rn", ":lua vim.lsp.buf.rename() <CR>", { desc = "LSP rename" })
-vim.keymap.set("n", "<leader>df", ":lua vim.diagnostic.open_float() <CR>", { desc = "Show error" })
-vim.keymap.set("n", "[d", ":lua vim.diagnostic.goto_prev() <CR> :lua vim.lsp.buf.code_action() <CR>", { desc = "Goto prev error and show code actions" })
-vim.keymap.set("n", "]d", ":lua vim.diagnostic.goto_next() <CR> :lua vim.lsp.buf.code_action() <CR>", { desc = "Goto next error and show code actions" })
-vim.keymap.set("n", "<leader>[", ":lua vim.diagnostic.goto_prev() <CR>", { desc = "Goto prev error" })
-vim.keymap.set("n", "<leader>]", ":lua vim.diagnostic.goto_next() <CR>", { desc = "Goto next error" })
-vim.keymap.set("n", "<leader>dl", ":lua vim.diagnostic.setloclist() <CR>", { desc = "Show loc list" })
-vim.keymap.set("v", "<leader>f", ":lua vim.lsp.buf.format()", { desc = "Format current buffer" })
-
 -- general
 diagnostic.config({
   virtual_text = true,
@@ -28,8 +16,21 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 lsp.eslint.setup{}
 lsp.cssls.setup{}
+require("lspsaga").setup({
+  settings = {
+    code_action = {
+      extend_gitsigns = false
+    }
+  }
+})
 
-require("typescript-tools").setup {}
+require("typescript-tools").setup {
+  settings = {
+    tsserver_file_preferences = {
+      quotePreference = "single"
+    }
+  }
+}
 
 -- golang
 
@@ -68,3 +69,17 @@ vim.cmd [[autocmd BufWritePre *.go lua OrgImports(1000)]]
 
 lsp.gdscript.setup{capabilities = capabilities}
 
+-- mappings
+
+vim.keymap.set("n", "gd", ":Lspsaga goto_definition<CR>", { desc = "LSP show definitions" })
+vim.keymap.set("n", "gp", ":Lspsaga peek_definition<CR>", { desc = "LSP show definitions" })
+vim.keymap.set("n", "<C-b>", ":Lspsaga code_action<CR>", { desc = "LSP show code actions" })
+vim.keymap.set("n", "H", ":lua vim.lsp.buf.hover() <CR>", { desc = "LSP show definition" })
+vim.keymap.set("n", "gr", ":Lspsaga rename<CR>", { desc = "LSP rename" })
+vim.keymap.set("n", "<leader>df", ":lua vim.diagnostic.open_float() <CR>", { desc = "Show error" })
+vim.keymap.set("n", "[d", ":lua vim.diagnostic.goto_prev() <CR> :Lspsaga code_action<CR>", { desc = "Goto prev error and show code actions" })
+vim.keymap.set("n", "]d", ":lua vim.diagnostic.goto_next() <CR> :Lspsaga code_action<CR>", { desc = "Goto next error and show code actions" })
+vim.keymap.set("n", "gk", ":lua vim.diagnostic.goto_prev() <CR>", { desc = "Goto prev error" })
+vim.keymap.set("n", "gj", ":lua vim.diagnostic.goto_next() <CR>", { desc = "Goto next error" })
+vim.keymap.set("n", "gl", ":Lspsaga lsp_finder<CR>", { desc = "Show loc list" })
+vim.keymap.set("v", "<leader>f", ":lua vim.lsp.buf.format()", { desc = "Format current buffer" })

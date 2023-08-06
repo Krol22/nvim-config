@@ -48,6 +48,14 @@ return require('packer').startup(function(use)
     "pmizio/typescript-tools.nvim",
     requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" }
   }
+  use {
+    "glepnir/lspsaga.nvim",
+    requires = {
+        {"nvim-tree/nvim-web-devicons"},
+        --Please make sure you install markdown and markdown_inline parser
+        {"nvim-treesitter/nvim-treesitter"}
+    }
+  }
 
   -- completion
   use 'hrsh7th/cmp-buffer'
@@ -96,6 +104,6 @@ return require('packer').startup(function(use)
   use 'cocopon/iceberg.vim'
   use 'kadekillary/skull-vim'
   use 'cseelus/vim-colors-lucid'
-  use 'krol22/vim-colors-paramount'
   use 'kvrohit/mellow.nvim'
+  use 'yorickpeterse/vim-paper'
 end)

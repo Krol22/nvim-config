@@ -58,6 +58,7 @@ cmd('autocmd FileType html setlocal shiftwidth=2 expandtab')
 
 vim.o.termguicolors = true
 vim.cmd("colorscheme eva01")
+-- vim.cmd("colorscheme paper")
 
 g.rainbow_active = 1
 g.vim_json_syntax_conceal = 0
