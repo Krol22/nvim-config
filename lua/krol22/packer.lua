@@ -38,7 +38,6 @@ return require('packer').startup(function(use)
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'folke/trouble.nvim'
-  use 'tpope/vim-fugitive'
 
   -- lsp
   use 'williamboman/mason.nvim'
@@ -50,7 +49,7 @@ return require('packer').startup(function(use)
   }
   use 'simrat39/rust-tools.nvim'
   use {
-    "glepnir/lspsaga.nvim",
+    "nvimdev/lspsaga.nvim",
     requires = {
         {"nvim-tree/nvim-web-devicons"},
         --Please make sure you install markdown and markdown_inline parser
@@ -81,19 +80,10 @@ return require('packer').startup(function(use)
     ft = { 'gdscript', 'gd', 'gdresource' }
   }
 
-  use 'mfussenegger/nvim-dap'
-  use 'dmmulroy/tsc.nvim'
-
   use 'Exafunction/codeium.vim'
 
-  use {
-  "jackMort/ChatGPT.nvim",
-    requires = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim"
-    }
-  }
+  -- notes
+  use 'nvim-neorg/neorg'
 
   -- apperance
   use 'vim-airline/vim-airline'
