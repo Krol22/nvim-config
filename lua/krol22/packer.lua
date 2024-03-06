@@ -32,13 +32,13 @@ return require('packer').startup(function(use)
   use 'nmac427/guess-indent.nvim'
   use 'christoomey/vim-tmux-navigator'
   use 'rcarriga/nvim-notify'
+  use 'nvimtools/none-ls.nvim'
 
   use 'mrjones2014/legendary.nvim'
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'folke/trouble.nvim'
   use 'tpope/vim-fugitive'
-  use 'mbbill/undotree'
 
   -- lsp
   use 'williamboman/mason.nvim'
@@ -48,6 +48,7 @@ return require('packer').startup(function(use)
     "pmizio/typescript-tools.nvim",
     requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" }
   }
+  use 'simrat39/rust-tools.nvim'
   use {
     "glepnir/lspsaga.nvim",
     requires = {
@@ -58,11 +59,12 @@ return require('packer').startup(function(use)
   }
 
   -- completion
+  use 'hrsh7th/nvim-cmp'
+
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-nvim-lua'
-  use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
   use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
@@ -81,6 +83,8 @@ return require('packer').startup(function(use)
 
   use 'mfussenegger/nvim-dap'
   use 'dmmulroy/tsc.nvim'
+
+  use 'Exafunction/codeium.vim'
 
   use {
   "jackMort/ChatGPT.nvim",
@@ -104,6 +108,17 @@ return require('packer').startup(function(use)
   use 'cocopon/iceberg.vim'
   use 'kadekillary/skull-vim'
   use 'cseelus/vim-colors-lucid'
-  use 'kvrohit/mellow.nvim'
+  use 'mellow-theme/mellow.nvim'
   use 'yorickpeterse/vim-paper'
+  use 'nikolvs/vim-sunbather'
+  use 'xiyaowong/transparent.nvim'
+  use 'fcpg/vim-fahrenheit'
+  use 'namrabtw/rusty.nvim'
+  use 'AlessandroYorba/Sierra'
+  use 'AlexvZyl/nordic.nvim'
+  use { "catppuccin/nvim", as = "catppuccin" }
+  use 'franbach/miramare'
+  use 'Biscuit-Colorscheme/nvim'
+  use 'habamax/vim-habamax'
+  use 'gerardbm/vim-atomic'
 end)

@@ -20,7 +20,10 @@ require("lspsaga").setup({
   settings = {
     code_action = {
       extend_gitsigns = false
-    }
+    },
+  },
+  ui = {
+    code_action = '',
   }
 })
 

@@ -1,8 +1,17 @@
-local telescope = require('telescope')
-local actions = require('telescope.actions')
+local telescope = require("telescope")
+local actions = require("telescope.actions")
 local fb_actions = telescope.extensions.file_browser.actions
 
 telescope.load_extension "file_browser"
+telescope.setup{
+  defaults = {
+    layout_strategy = "flex",
+    layout_config = {
+      flip_columns = 200
+    }
+  }
+}
+
 
 vim.keymap.set("n", "<C-p>", ":Telescope find_files <CR>", { desc = "Telescope find files" })
 vim.keymap.set("n", "<C-f>", ":Telescope live_grep <CR>", { desc = "Telescope find in files" })

@@ -57,8 +57,17 @@ cmd('autocmd FileType css setlocal shiftwidth=2 expandtab')
 cmd('autocmd FileType html setlocal shiftwidth=2 expandtab')
 
 vim.o.termguicolors = true
-vim.cmd("colorscheme eva01")
+vim.cmd("set background=dark")
+-- vim.cmd("colorscheme iceberg")
 -- vim.cmd("colorscheme paper")
+-- vim.cmd("colorscheme catppuccin-mocha")
+-- vim.cmd("colorscheme fahrenheit")
+-- vim.cmd("colorscheme habamax")
+-- vim.cmd("colorscheme eva01")
+vim.cmd("colorscheme nordic")
+-- vim.cmd("colorscheme biscuit")
+
+g.airline_theme = 'atomic'
 
 g.rainbow_active = 1
 g.vim_json_syntax_conceal = 0
@@ -69,3 +78,12 @@ g.godot_executable = '/Applications/Godot.app'
 
 -- vim-notes directory
 g.notes_directories = {"~/Documents/vimnotes"}
+
+g['airline#extensions#codeium#enabled'] = 1
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "json", "jsonc", "markdown" },
+	callback = function()
+		vim.opt.conceallevel = 0
+	end,
+})
