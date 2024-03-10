@@ -2,7 +2,7 @@ local alpha = require'alpha'
 local dashboard = require'alpha.themes.dashboard'
 dashboard.section.header.val = {
   [[                                                  ]],
-  [[                        HELLO                     ]],
+  [[                     H.E.L.L.O.                  ]],
   [[                                                  ]],
   [[⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠔⣨⣼⣽⣿⣿⣯⣙⣛⠯⣿⣥⣒⡢⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀]],
   [[⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⣴⣶⣿⡿⠟⠛⠛⠛⠛⠻⡿⣾⣶⣝⣿⣿⣶⣮⣖⣤⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀]],
@@ -27,13 +27,25 @@ dashboard.section.header.val = {
   [[                                                  ]],
 }
 
-dashboard.section.header.opts.hl = "Define"
+vim.cmd[[highlight AlphaHeader guifg=#eb6f92]]
+dashboard.section.header.opts.hl = "AlphaHeader"
 dashboard.section.buttons.val = {
-  dashboard.button("1", "[1] Find file", ":Telescope find_files <CR>"),
-  dashboard.button("2", "[2] Find word", ":Telescope live_grep <CR>"),
-  dashboard.button("3", "[3] New file", ":enew<CR>"),
-  dashboard.button("4", "[4] Go to config", ":e$MYVIMRC | :cd %:p:h | Oil <CR>"),
+  dashboard.button("N", "Neorg", ":Neorg index<CR>"),
+  dashboard.button("C", "Config", ":e$MYVIMRC | :cd %:p:h | Oil <CR>"),
   dashboard.button("q", "Quit", ":qa<CR>"),
 }
+
+-- Would be nice if this quote would change every day
+dashboard.section.footer.val = {
+  [[                                                        ]],
+  [[                                                        ]],
+  [[                                                        ]],
+  [[                                                        ]],
+  [[                                                        ]],
+  [[ "Don't explain your philosophy. Embody it" - Epictetus ]],
+}
+
+vim.cmd[[highlight AlphaFooter cterm=italic gui=italic guifg=#6e6a86]]
+dashboard.section.footer.opts.hl = "AlphaFooter"
 
 alpha.setup(dashboard.config)
