@@ -14,10 +14,7 @@ return require('packer').startup(function(use)
 
   -- basic setup
   use 'tpope/vim-vinegar'
-  use {
-      'stevearc/oil.nvim',
-      config = function() require('oil').setup() end
-    }
+  use 'stevearc/oil.nvim'
   use 'tpope/vim-surround'
   use 'scrooloose/nerdcommenter'
   use 'windwp/nvim-autopairs'
@@ -33,6 +30,7 @@ return require('packer').startup(function(use)
   use 'rcarriga/nvim-notify'
   use 'nvimtools/none-ls.nvim'
   use 'lukas-reineke/indent-blankline.nvim'
+  use 'goolord/alpha-nvim'
 
   use 'mrjones2014/legendary.nvim'
   use 'nvim-telescope/telescope.nvim'
