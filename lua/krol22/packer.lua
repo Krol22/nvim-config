@@ -22,17 +22,17 @@ return require('packer').startup(function(use)
   use 'scrooloose/nerdcommenter'
   use 'windwp/nvim-autopairs'
   use 'alvan/vim-closetag'
-  use 'Yggdroot/indentLine'
   use 'mg979/vim-visual-multi'
   use 'romainl/vim-qf'
   use 'nvim-lua/plenary.nvim'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'nvim-treesitter/nvim-treesitter-context'
-  use 'kyazdani42/nvim-web-devicons'
+  use 'nvim-tree/nvim-web-devicons'
   use 'nmac427/guess-indent.nvim'
   use 'christoomey/vim-tmux-navigator'
   use 'rcarriga/nvim-notify'
   use 'nvimtools/none-ls.nvim'
+  use 'lukas-reineke/indent-blankline.nvim'
 
   use 'mrjones2014/legendary.nvim'
   use 'nvim-telescope/telescope.nvim'
@@ -111,4 +111,5 @@ return require('packer').startup(function(use)
   use 'Biscuit-Colorscheme/nvim'
   use 'habamax/vim-habamax'
   use 'gerardbm/vim-atomic'
+  use { 'rose-pine/neovim', as ='rose-pine'}
 end)

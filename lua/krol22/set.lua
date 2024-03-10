@@ -64,14 +64,13 @@ vim.cmd("set background=dark")
 -- vim.cmd("colorscheme fahrenheit")
 -- vim.cmd("colorscheme habamax")
 -- vim.cmd("colorscheme eva01")
-vim.cmd("colorscheme nordic")
+-- vim.cmd("colorscheme nordic")
 -- vim.cmd("colorscheme biscuit")
+vim.cmd("colorscheme rose-pine")
 
 g.airline_theme = 'atomic'
 
 g.rainbow_active = 1
-g.vim_json_syntax_conceal = 0
-g.vim_json_conceal = 0
 
 -- godot
 g.godot_executable = '/Applications/Godot.app'
@@ -80,10 +79,3 @@ g.godot_executable = '/Applications/Godot.app'
 g.notes_directories = {"~/Documents/vimnotes"}
 
 g['airline#extensions#codeium#enabled'] = 1
-
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "json", "jsonc", "markdown" },
-	callback = function()
-		vim.opt.conceallevel = 0
-	end,
-})
