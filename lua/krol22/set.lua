@@ -37,9 +37,6 @@ o.dir = "/Users/krol22/.tmp"
 o.undofile = true
 o.undodir = '/Users/krol22/.tmp'
 
--- indent line
-g.indentLine_char = '|'
-
 -- remove comments in new line
 cmd('augroup global')
 cmd('autocmd!')
@@ -56,20 +53,8 @@ cmd('autocmd FileType javascript.jsx setlocal shiftwidth=2 expandtab')
 cmd('autocmd FileType css setlocal shiftwidth=2 expandtab')
 cmd('autocmd FileType html setlocal shiftwidth=2 expandtab')
 
-vim.o.termguicolors = true
-vim.cmd("set background=dark")
--- vim.cmd("colorscheme iceberg")
--- vim.cmd("colorscheme paper")
--- vim.cmd("colorscheme catppuccin-mocha")
--- vim.cmd("colorscheme fahrenheit")
--- vim.cmd("colorscheme habamax")
--- vim.cmd("colorscheme eva01")
--- vim.cmd("colorscheme nordic")
--- vim.cmd("colorscheme biscuit")
-vim.cmd("colorscheme rose-pine")
 
 g.airline_theme = 'atomic'
-
 g.rainbow_active = 1
 
 -- godot

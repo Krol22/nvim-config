@@ -1,6 +1,5 @@
 local cmp = require('cmp')
 local lspkind = require('lspkind')
-local tabnine = require('cmp_tabnine.config')
 
 cmp.setup {
   snippet = {
@@ -38,7 +37,6 @@ cmp.setup {
   },
   sources = {
     { name = "nvim_lsp", keyword_length = 2, max_item_count = 20 },
-    -- { name = "cmp_tabnine", keyword_length = 2 },
     { name = "path" },
     { name = "buffer", keyword_length = 3 },
   },
@@ -48,7 +46,6 @@ cmp.setup {
       with_text = true,
       menu = {
         nvim_lsp = "[LSP]",
-        cmp_tabnine = "[T9]",
         path = "[path]",
         buffer = "[buf]",
       }
@@ -59,13 +56,3 @@ cmp.setup {
     ghost_text = true,
   }
 }
-
-tabnine:setup({
-  max_lines = 1000,
-  max_num_results = 20,
-  sort = true,
-  run_on_every_keystroke = true,
-  snippet_placeholder = '..',
-  ignored_file_types = {},
-  show_prediction_strength = true
-})
