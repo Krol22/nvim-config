@@ -1,8 +1,13 @@
 local alpha = require'alpha'
 local dashboard = require'alpha.themes.dashboard'
+
+local cwd = vim.fn.getcwd()
+
+local cwdLine = string.format("You're in: '%s'", cwd)
+
 dashboard.section.header.val = {
   [[                                                  ]],
-  [[                     H.E.L.L.O.                  ]],
+  [[                     H.E.L.L.O.                   ]],
   [[                                                  ]],
   [[⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠔⣨⣼⣽⣿⣿⣯⣙⣛⠯⣿⣥⣒⡢⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀]],
   [[⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⣴⣶⣿⡿⠟⠛⠛⠛⠛⠻⡿⣾⣶⣝⣿⣿⣶⣮⣖⣤⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀]],
@@ -24,6 +29,10 @@ dashboard.section.header.val = {
   [[⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡜⡟⣿⣾⣄⠀⠀⢀⣴⣷⠛⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀]],
   [[⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⣳⢹⡇⣿⣿⣿⣆⢠⣾⣿⣿⢈⣿⣿⣿⣿⣿⣿⣿⣿⢿⣻⣽⣻⢿⣿⣿⣿⣿⣿⣆⠀⠀]],
   [[⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢜⣼⢋⣿⡇⣿⣿⣿⣋⣻⣿⣿⣿⢂⣿⣿⣿⣿⣿⢿⣻⣽⣿⣿⢯⡿⣿⣽⣿⣿⣿⣿⣿⣧⠀]],
+  [[                                                  ]],
+  [[                                                  ]],
+  cwdLine,
+  [[                                                  ]],
   [[                                                  ]],
 }
 
