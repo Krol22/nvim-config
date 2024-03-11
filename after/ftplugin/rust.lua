@@ -9,10 +9,10 @@ local opts = {
       parameter_hints_prefix = "",
       other_hints_prefix = "",
     },
-  },
+    },
 
-  -- see https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#rust_analyzer
-  server = {
+    -- see https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#rust_analyzer
+    server = {
     on_attach = on_attach,
     capabilities = require("cmp_nvim_lsp").default_capabilities(),
     settings = {
@@ -25,4 +25,4 @@ local opts = {
   },
 }
 
-require("rust-tools").setup(opts)
+require('rust-tools').setup(opts)

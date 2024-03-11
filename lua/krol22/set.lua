@@ -1,19 +1,16 @@
 local o = vim.o
 local g = vim.g
-local wo = vim.wo
 local bo = vim.bo
 local cmd = vim.cmd
 
 o.updatetime = 50
 
-vim.notify = require("notify")
-
 -- use mouse
 o.mouse = 'a'
 
 -- line numbers
-wo.number = true
-wo.relativenumber = true
+vim.wo.number = true
+vim.wo.relativenumber = true
 
 -- indent
 bo.tabstop = 2
@@ -52,15 +49,3 @@ cmd('autocmd FileType javascript setlocal shiftwidth=2 expandtab')
 cmd('autocmd FileType javascript.jsx setlocal shiftwidth=2 expandtab')
 cmd('autocmd FileType css setlocal shiftwidth=2 expandtab')
 cmd('autocmd FileType html setlocal shiftwidth=2 expandtab')
-
-
-g.airline_theme = 'atomic'
-g.rainbow_active = 1
-
--- godot
-g.godot_executable = '/Applications/Godot.app'
-
--- vim-notes directory
-g.notes_directories = {"~/Documents/vimnotes"}
-
-g['airline#extensions#codeium#enabled'] = 1
