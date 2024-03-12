@@ -30,9 +30,7 @@ dashboard.section.header.val = {
   [[⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⣳⢹⡇⣿⣿⣿⣆⢠⣾⣿⣿⢈⣿⣿⣿⣿⣿⣿⣿⣿⢿⣻⣽⣻⢿⣿⣿⣿⣿⣿⣆⠀⠀]],
   [[⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢜⣼⢋⣿⡇⣿⣿⣿⣋⣻⣿⣿⣿⢂⣿⣿⣿⣿⣿⢿⣻⣽⣿⣿⢯⡿⣿⣽⣿⣿⣿⣿⣿⣧⠀]],
   [[                                                  ]],
-  [[                                                  ]],
   cwdLine,
-  [[                                                  ]],
   [[                                                  ]],
 }
 
@@ -46,8 +44,6 @@ dashboard.section.buttons.val = {
 
 -- Would be nice if this quote would change every day
 dashboard.section.footer.val = {
-  [[                                                        ]],
-  [[                                                        ]],
   [[                                                        ]],
   [[                                                        ]],
   [[                                                        ]],
