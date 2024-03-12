@@ -23,7 +23,7 @@ return {
     'habamax/vim-godot',
     ft = { 'gdscript', 'gd', 'gdresource' },
     config = function()
-      g.godot_executable = '/Applications/Godot.app'
+      vim.g.godot_executable = '/Applications/Godot.app'
     end
   },
 }
