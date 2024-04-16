@@ -37,7 +37,11 @@ dashboard.section.header.val = {
 vim.cmd[[highlight AlphaHeader guifg=#eb6f92]]
 dashboard.section.header.opts.hl = "AlphaHeader"
 dashboard.section.buttons.val = {
-  dashboard.button("N", "Neorg", ":Neorg index<CR>"),
+  dashboard.button(
+    "O",
+    "Obsidian/Planetaris",
+    ":e/Users/krol22/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault/[01]_projects/Planetaris/GDD/Index.md <CR> | cd %:p:h | Oil <CR>"
+  ),
   dashboard.button("C", "Config", ":e$MYVIMRC | :cd %:p:h | Oil <CR>"),
   dashboard.button("q", "Quit", ":qa<CR>"),
 }

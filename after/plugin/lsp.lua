@@ -72,6 +72,10 @@ vim.cmd [[autocmd BufWritePre *.go lua OrgImports(1000)]]
 
 lsp.gdscript.setup{capabilities = capabilities}
 
+-- ruby
+
+lsp.ruby_ls.setup{}
+
 -- mappings
 
 vim.keymap.set("n", "gd", ":Lspsaga goto_definition<CR>", { desc = "LSP show definitions" })

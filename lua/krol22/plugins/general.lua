@@ -31,5 +31,9 @@ return {
   'mrjones2014/legendary.nvim',
   'folke/trouble.nvim',
   -- coding
-  'Exafunction/codeium.vim',
+  {
+    'Exafunction/codeium.vim',
+    event = 'BufEnter'
+  },
+  { 'nelstrom/vim-textobj-rubyblock', dependencies = 'kana/vim-textobj-user'},
 }

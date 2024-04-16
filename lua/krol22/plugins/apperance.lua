@@ -38,7 +38,24 @@ return {
       vim.cmd("set background=dark")
       vim.cmd('colorscheme rose-pine')
     end,
-  }
+  },
+  -- 'morhetz/gruvbox',
+  -- {
+    -- "f-person/auto-dark-mode.nvim",
+    -- config = {
+      -- update_interval = 1000,
+      -- set_dark_mode = function()
+        -- vim.api.nvim_set_option("background", "dark")
+        -- vim.cmd("colorscheme rose-pine")
+        -- vim.g.airline_theme = 'atomic'
+      -- end,
+      -- set_light_mode = function()
+        -- vim.api.nvim_set_option("background", "light")
+        -- vim.cmd("colorscheme gruvbox")
+        -- vim.g.airline_theme = 'gruvbox'
+      -- end,
+    -- },
+  -- },
   -- Unused colorschemes
   -- 'hachy/eva01.vim',
   -- 'embark-theme/vim',
