@@ -39,8 +39,8 @@ dashboard.section.header.opts.hl = "AlphaHeader"
 dashboard.section.buttons.val = {
   dashboard.button(
     "O",
-    "Obsidian/Planetaris",
-    ":e/Users/krol22/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault/[01]_projects/Planetaris/GDD/Index.md <CR> | cd %:p:h | Oil <CR>"
+    "Notes",
+    ":e/Users/krol22/Library/Mobile Documents/com~apple~CloudDocs/Documents/Notes/index.md <CR> | cd %:p:h | Oil <CR>"
   ),
   dashboard.button("C", "Config", ":e$MYVIMRC | :cd %:p:h | Oil <CR>"),
   dashboard.button("q", "Quit", ":qa<CR>"),

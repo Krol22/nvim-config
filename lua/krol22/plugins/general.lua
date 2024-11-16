@@ -14,7 +14,7 @@ return {
   'romainl/vim-qf',
   'nvim-lua/plenary.nvim',
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
-  'nvim-treesitter/nvim-treesitter-context',
+  -- 'nvim-treesitter/nvim-treesitter-context',
   'nvim-tree/nvim-web-devicons',
   {
     'nmac427/guess-indent.nvim',
@@ -30,10 +30,17 @@ return {
   'nvimtools/none-ls.nvim',
   'mrjones2014/legendary.nvim',
   'folke/trouble.nvim',
+  'Asheq/close-buffers.vim',
   -- coding
   {
     'Exafunction/codeium.vim',
     event = 'BufEnter'
   },
   { 'nelstrom/vim-textobj-rubyblock', dependencies = 'kana/vim-textobj-user'},
+  {
+    "tris203/precognition.nvim",
+    config = {
+      startVisible = false,
+    }
+  }
 }

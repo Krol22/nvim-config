@@ -44,9 +44,9 @@ lsp.gopls.setup {
   settings = {
     gopls = {
       analyses = {
-        unusedparams = true,
+        unusedparams = false,
       },
-      staticcheck = true,
+      staticcheck = true
     },
   },
 }
@@ -76,6 +76,10 @@ lsp.gdscript.setup{capabilities = capabilities}
 
 lsp.ruby_ls.setup{}
 
+-- svelte
+
+lsp.svelte.setup{}
+
 -- mappings
 
 vim.keymap.set("n", "gd", ":Lspsaga goto_definition<CR>", { desc = "LSP show definitions" })
@@ -89,4 +93,4 @@ vim.keymap.set("n", "]d", ":lua vim.diagnostic.goto_next() <CR> :Lspsaga code_ac
 vim.keymap.set("n", "gk", ":lua vim.diagnostic.goto_prev() <CR>", { desc = "Goto prev error" })
 vim.keymap.set("n", "gj", ":lua vim.diagnostic.goto_next() <CR>", { desc = "Goto next error" })
 vim.keymap.set("n", "gl", ":Lspsaga lsp_finder<CR>", { desc = "Show loc list" })
-vim.keymap.set("v", "<leader>f", ":lua vim.lsp.buf.format()", { desc = "Format current buffer" })
+vim.keymap.set("n", "<leader>f", ":lua vim.lsp.buf.format() <CR>", { desc = "Format current buffer" })

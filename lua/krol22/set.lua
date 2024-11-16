@@ -5,6 +5,8 @@ local cmd = vim.cmd
 
 o.updatetime = 50
 
+vim.opt.termguicolors = true
+
 -- use mouse
 o.mouse = 'a'
 

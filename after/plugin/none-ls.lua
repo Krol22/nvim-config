@@ -7,4 +7,4 @@ null_ls.setup({
   },
 })
 
-vim.keymap.set("n", "F", ":lua vim.lsp.buf.format({ async = false })<CR>", { desc = "Format file" })
+vim.keymap.set("n", "gf", ":lua vim.lsp.buf.format({ async = false, timeout = 5000 })<CR>", { desc = "Format file" })
